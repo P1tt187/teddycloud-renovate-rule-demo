@@ -2,7 +2,7 @@ services:
   teddycloud:
     container_name: teddycloud
     hostname: teddycloud
-    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0_alpine
+    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0_alpine@sha256:88bea7f989f90995b103eeeb80f01481c462da432d66b2ba1df6d484c15583b2
     # ports:
     #  - 80:80 #optional (for the webinterface)
     #  - 8443:8443 #optional (for the webinterface)
