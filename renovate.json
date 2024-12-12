@@ -7,6 +7,7 @@
     "matchPackageNames":["ghcr.io/toniebox-reverse-engineering/teddycloud"],
     "versionCompatibility": "^tc_(?<version>[^_]+)(?<compatibility>_[^@]*)(@(?<currentDigest>sha256:[a-f0-9]+))?",
     "versioning": "semver",
-    "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
+    "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud",
+    "extractVersion": "(?<version>\\d+(?:\\.\\d+)+)"
   }]
 }
