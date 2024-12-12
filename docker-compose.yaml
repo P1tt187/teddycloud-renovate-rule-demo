@@ -16,7 +16,7 @@ services:
       - cache:/teddycloud/data/cache
     restart: unless-stopped
   teddycloud2:
-    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0  
+    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0@sha256:fbc0ad8a5f9590485afcafefe9d332a35634123955eef5747b378ef453595fb0  
 volumes:
   certs:
   config:
