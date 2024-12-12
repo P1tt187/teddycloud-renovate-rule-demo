@@ -2,5 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>P1tt187/renovate-config"
-  ]
+  ],
+  "packageRules": [{
+    "matchPackageNames":["ghcr.io/toniebox-reverse-engineering/teddycloud"],
+    "versionCompatibility": "^tc_(?<version>[^_]+)(?<compatibility>_.*)",
+    "versioning": "semver"
+  }]
 }
