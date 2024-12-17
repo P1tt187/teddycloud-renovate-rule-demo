@@ -3,14 +3,19 @@
   "extends": [
     "local>P1tt187/renovate-config"
   ],
-  "packageRules": [ {
-       "matchDepNames":["ghcr.io/toniebox-reverse-engineering/teddycloud"],
-       "versionCompatibility": "tc_(?<version>[^_@]+)(_(?<compatibility>[^@]*))?(@(?<currentDigest>sha256:[a-f0-9]+))?",
-       "versioning": "semver",
-       "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
+  "packageRules": [
+    {
+      "matchDepNames": [
+        "ghcr.io/toniebox-reverse-engineering/teddycloud"
+      ],
+      "versionCompatibility": "tc_(?<version>[^_@]+)(_(?<compatibility>[^@]*))?(@(?<currentDigest>sha256:[a-f0-9]+))?",
+      "versioning": "semver",
+      "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
     }
-],
-"kubernetes": {
-  "fileMatch": ["deployment.yaml"]
-}
+  ],
+  "kubernetes": {
+    "fileMatch": [
+      "deployment.yaml"
+    ]
+  }
 }
