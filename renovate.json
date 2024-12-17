@@ -9,5 +9,8 @@
        "versioning": "semver",
        "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
     }
-]
+],
+"kubernetes": {
+  "fileMatch": ["deployment.yaml"]
+}
 }

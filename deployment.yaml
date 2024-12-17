@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teddycloud  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teddycloud
+  template:
+    nodeSelector:
+      matchLabels:
+        node-type=x86
+    metadata:
+      labels:
+        app: teddycloud
+    spec:
+      serviceAccountName: teddycloud-sa
+      containers:
+      - name: teddycloud
+        image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.2
+        ports:
+        # Uncomment the following as needed:
+          - containerPort: 80
+        # - containerPort: 8443
+          - containerPort: 443
+        volumeMounts:
+        - name: certs
+          mountPath: /teddycloud/certs
+        - name: config
+          mountPath: /teddycloud/config
+        - name: content
+          mountPath: /teddycloud/data/content
+        - name: library
+          mountPath: /teddycloud/data/library
+        - name: firmware
+          mountPath: /teddycloud/data/firmware
+        - name: cache
+          mountPath: /teddycloud/data/cache
+      restartPolicy: Always
+      volumes:
+      - name: certs
+        persistentVolumeClaim:
+          claimName: teddycloud-certs
+      - name: config
+        persistentVolumeClaim:
+          claimName: teddycloud-config
+      - name: content
+        persistentVolumeClaim:
+          claimName: teddycloud-content
+      - name: library
+        persistentVolumeClaim:
+          claimName: teddycloud-library
+      - name: firmware
+        persistentVolumeClaim:
+          claimName: teddycloud-firmware
+      - name: cache
+        persistentVolumeClaim:
+          claimName: teddycloud-cache
