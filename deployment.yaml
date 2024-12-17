@@ -18,7 +18,7 @@ spec:
       serviceAccountName: teddycloud-sa
       containers:
       - name: teddycloud
-        image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.2
+        image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0
         ports:
         # Uncomment the following as needed:
           - containerPort: 80
