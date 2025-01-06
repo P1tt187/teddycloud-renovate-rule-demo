@@ -16,14 +16,13 @@
 
   "customManagers": [
     {
-       "customType": "regex",
-       "fileMatch": [
-          ".+\\.ya?ml$"
-       ],
-       "matchStrings": [
-          "\\s*#\\s*renovate: datasource=(?<datasource>.*?) ( versioning=(?<versioning>.*?))?\\s.*?image\\s*:\\s*(\"|')?(?<depName>.*?):(?<currentValue>.*)(\"|')?"
-       ],
-       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
+      "customType": "regex",
+      "fileMatch": ["^deployment\\.yaml$"],
+      "matchStrings": [
+        "# renovate: datasource=docker\\s+image:\\s+(?<depName>.*?):(?<currentValue>.*?)\\s"
+      ],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
     }
   ]
 }
