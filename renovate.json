@@ -13,11 +13,7 @@
       "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
     }
   ],
-  "kubernetes": {
-    "fileMatch": [
-      "deployment.yaml"
-    ]
-  },
+
   "customManagers": [
     {
        "customType": "regex",
