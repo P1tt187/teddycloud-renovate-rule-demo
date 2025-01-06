@@ -18,6 +18,7 @@ spec:
       serviceAccountName: teddycloud-sa
       containers:
       - name: teddycloud
+        # renovate: datasource=docker
         image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0
         ports:
         # Uncomment the following as needed:

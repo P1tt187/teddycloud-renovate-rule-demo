@@ -17,5 +17,17 @@
     "fileMatch": [
       "deployment.yaml"
     ]
-  }
+  },
+  "customManagers": [
+    {
+       "customType": "regex",
+       "fileMatch": [
+          ".+\\.ya?ml$"
+       ],
+       "matchStrings": [
+          "#\\s*renovate: datasource=(?<datasource>.*?) ( versioning=(?<versioning>.*?))?\\s.*?image\\s*:\\s*(\"|')?(?<depName>.*?):(?<currentValue>.*)(\"|')?"
+       ],
+       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{/if}}"
+    }
+  ]
 }
