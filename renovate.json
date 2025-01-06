@@ -19,7 +19,7 @@
       "customType": "regex",
       "fileMatch": ["^deployment\\.yaml$"],
       "matchStrings": [
-        "# renovate: datasource=docker\\s+image:\\s+(?<depName>.*?):(?<currentValue>.*?)\\s"
+        "# renovate: datasource=docker\\s+image:\\s+(?<depName>.*?)(:(?<currentValue>[^@\\s]+))?(@(?<currentDigest>sha256:[a-f0-9]{64}))?\\s"
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
