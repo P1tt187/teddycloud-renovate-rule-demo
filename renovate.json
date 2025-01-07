@@ -17,12 +17,12 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^deployment\\.yaml$"],
+      "fileMatch": ["deployment.yaml"],
       "matchStrings": [
-        "# renovate: \\s+image:\\s+(?<depName>.*?)(:(?<currentValue>[^@\\s]+))?(@(?<currentDigest>sha256:[a-f0-9]{64}))?\\s"
+        "image:\\s*(?<depName>ghcr\\.io/toniebox-reverse-engineering/teddycloud):(?<currentValue>tc_v[0-9.]+)(?:@(?<currentDigest>sha256:[a-fA-F0-9]{64}))?"
       ],
       "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
+      "versioningTemplate": "semver"
     }
   ]
 }
