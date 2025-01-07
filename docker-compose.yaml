@@ -2,7 +2,7 @@ services:
   teddycloud:
     container_name: teddycloud
     hostname: teddycloud
-    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0_alpine@sha256:88bea7f989f90995b103eeeb80f01481c462da432d66b2ba1df6d484c15583b2
+    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.3_alpine@sha256:f2b5c3997ec50b71434f2af8e3bdb3d358e6ec67f0d09411a1dae9721d7b75e7
     # ports:
     #  - 80:80 #optional (for the webinterface)
     #  - 8443:8443 #optional (for the webinterface)
@@ -16,7 +16,7 @@ services:
       - cache:/teddycloud/data/cache
     restart: unless-stopped
   teddycloud2:
-    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0@sha256:fbc0ad8a5f9590485afcafefe9d332a35634123955eef5747b378ef453595fb0
+    image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.3@sha256:2950ba0ba88305ae48281402fbf78dffc51e1e2d4de14c1aa9cab7104fc2a5ea
 volumes:
   certs:
   config:
