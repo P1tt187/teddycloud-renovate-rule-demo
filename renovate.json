@@ -13,11 +13,12 @@
       "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
     }
   ],
-
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["deployment.yaml"],
+      "managerFilePatterns": [
+        "/deployment.yaml/"
+      ],
       "matchStrings": [
         "image:\\s*(?<depName>ghcr\\.io/toniebox-reverse-engineering/teddycloud):(?<currentValue>tc_v[0-9.]+)(?:@(?<currentDigest>sha256:[a-fA-F0-9]{64}))?"
       ],
