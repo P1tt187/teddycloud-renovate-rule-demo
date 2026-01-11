@@ -9,8 +9,9 @@
         "ghcr.io/toniebox-reverse-engineering/teddycloud"
       ],
       "versionCompatibility": "tc_(?<version>[^_@]+)(_(?<compatibility>[^@]*))?(@(?<currentDigest>sha256:[a-f0-9]+))?",
-      "versioning": "semver",
-      "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
+      "versioning": "loose",
+      "sourceUrl": "https://github.com/toniebox-reverse-engineering/teddycloud",
+      "changelogUrl": "https://github.com/toniebox-reverse-engineering/teddycloud"
     }
   ],
   "customManagers": [
