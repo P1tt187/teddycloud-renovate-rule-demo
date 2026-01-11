@@ -19,7 +19,7 @@ spec:
       containers:
       - name: teddycloud
         # renovate: 
-        image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.0
+        image: ghcr.io/toniebox-reverse-engineering/teddycloud:tc_v0.6.7
         ports:
         # Uncomment the following as needed:
           - containerPort: 80
