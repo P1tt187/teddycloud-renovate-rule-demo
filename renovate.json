@@ -24,7 +24,7 @@
         "image:\\s*(?<depName>ghcr\\.io/toniebox-reverse-engineering/teddycloud):(?<currentValue>tc_v[0-9.]+)(?:@(?<currentDigest>sha256:[a-fA-F0-9]{64}))?"
       ],
       "datasourceTemplate": "docker",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "loose"
     }
   ]
 }
